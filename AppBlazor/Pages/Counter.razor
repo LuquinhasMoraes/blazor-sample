@@ -1,0 +1,25 @@
+﻿@page "/counter"
+
+<PageTitle>Counter</PageTitle>
+
+<h1>Counter</h1>
+
+<p role="status">Current count: @currentCount</p>
+<p role="status">Current double count: @doubleCount</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+<button class="btn btn-primary" @onclick="IncrementDoubleCount">Click me for increment double counter</button>
+
+@code {
+    private int currentCount = 0;
+    private int doubleCount = 2;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+    private void IncrementDoubleCount()
+    {
+        doubleCount += 2;
+    }
+}
